@@ -1,0 +1,62 @@
+namespace Lista
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> Numeros = new List<int> { };
+            List<int> Pares = new List<int> { };
+            List<int> Impares = new List<int> { };
+
+            Console.WriteLine("Digite um número (Digite 0 pra encerrar): ");
+            int Num = -1;
+            while (Num != 0)
+            {
+                Console.WriteLine("Digite um número: ");
+                Num = int.Parse(Console.ReadLine());
+                if (Num > 0)
+                {
+                    Numeros.Add(Num);
+                }
+            }
+            foreach (int N in Numeros)
+            {
+                if (N % 2 == 0)
+                {
+                    Pares.Add(N);
+                }
+                else
+                {
+                    Impares.Add(N);
+                }
+
+            }
+            Pares.Sort();
+            Impares.Sort();
+
+            int SomaPares = 0;
+            int SomaImpares = 0;
+            foreach (int P in Pares)
+            {
+                SomaPares += P;
+            }
+            foreach (int I in Impares)
+            {
+                SomaImpares += I;
+            }
+
+            Console.WriteLine("Os números que são pares: ");
+            foreach (int P in Pares)
+            {
+                Console.WriteLine(P + "");
+            }
+            Console.WriteLine("Os números que são pares: ");
+            foreach (int I in Impares)
+            {
+                Console.WriteLine(I + "");
+            }
+            Console.WriteLine($"A soma dos pares é: {SomaPares} e a soma dos impares é: {SomaImpares} A soma total dos números é: {SomaImpares + SomaPares}");
+
+        }
+    }
+}
