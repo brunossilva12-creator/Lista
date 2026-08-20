@@ -1,0 +1,8 @@
+List<int> Valores = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
+Valores.RemoveAll(Valores => Valores % 2 == 0);
+
+foreach (var valor in Valores)
+{
+    Console.WriteLine(valor.ToString());
+}
+Console.ReadKey();

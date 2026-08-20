@@ -1,0 +1,11 @@
+list<string> Bancos = new List<string> {"Banco do Brasil", "Caixa", "Santander"};
+
+Bancos.add("NuBank");
+Bancos.Insert(2, "Bradesco");
+Bancos.Remove("NuBank");
+Bancos.Sort();
+Bancos.Reverse();
+Bancos.Count();
+Bancos.RemoveAt(Bancos.Count() - 1);
+Bancos.RemoveAt(3);
+Bancos.Clear();
