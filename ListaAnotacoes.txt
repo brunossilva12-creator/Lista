@@ -1,4 +1,5 @@
-list<string> Bancos = new List<string> {"Banco do Brasil", "Caixa", "Santander"};
+List<string> Bancos = new List<string> {"Banco do Brasil", "Caixa", "Santander"};
+List<string> Palavras = [];
 
 Bancos.add("NuBank");
 Bancos.Insert(2, "Bradesco");
@@ -10,8 +11,11 @@ Bancos.RemoveAt(Bancos.Count() - 1);
 Bancos.RemoveAt(3);
 Bancos.Clear();
 Console.writeLine(string.Join(",", Bancos));
+string Entrada = Console.ReadLine().Trim();
 
 if(!string.TryParse(Console.Readline(), out string Bancos))
 {
     Console.WriteLine("Entrada inválida");
 }
+
+if(s.Equals(Entrada, StringComparison.OrdinalIgnoreCase));
