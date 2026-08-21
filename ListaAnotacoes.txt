@@ -9,3 +9,9 @@ Bancos.Count();
 Bancos.RemoveAt(Bancos.Count() - 1);
 Bancos.RemoveAt(3);
 Bancos.Clear();
+Console.writeLine(string.Join(",", Bancos));
+
+if(!string.TryParse(Console.Readline(), out string Bancos))
+{
+    Console.WriteLine("Entrada inválida");
+}
