@@ -1,0 +1,39 @@
+namespace Lista
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> Numeros = new List<int> { };
+            int Num = -1;
+            while (Num != 0)
+            {
+                Console.WriteLine("Digite um número: ");
+                Num = int.Parse(Console.ReadLine());
+                if (Num > 0)
+                {
+                    Numeros.Add(Num);
+                }
+
+            }
+            int SomaNumeros = 0;
+            foreach (int N in Numeros)
+            {
+                SomaNumeros += N;
+            }
+            int MutNumeros = 1;
+            foreach (int N in Numeros)
+            {
+                MutNumeros *= N;
+            }
+
+            int Maior = Numeros.Max();
+            int Menor = Numeros.Min();
+
+            Console.WriteLine($"A soma dos números é: {SomaNumeros}");
+            Console.WriteLine($"A multiplicação dos números é: {MutNumeros}");
+            Console.WriteLine($"O maior número é: {Maior}");
+            Console.WriteLine($"O menor número é: {Menor}");
+        }
+    }
+}

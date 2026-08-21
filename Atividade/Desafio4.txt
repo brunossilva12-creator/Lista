@@ -1,0 +1,40 @@
+namespace Lista
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> NumerosInf = new List<int> { };
+            List<int> NumerosRep = new List<int> { };
+            List<int> NumerosNovos = new List<int> { };
+
+            Console.WriteLine("Digite um número (Digite 0 pra encerrar): ");
+            int Num = -1;
+            while (Num != 0)
+            {
+                Console.WriteLine("Digite um número: ");
+                Num = int.Parse(Console.ReadLine());
+                if (Num > 0)
+                {
+                    NumerosInf.Add(Num);
+                }
+            }
+
+            foreach (int N in NumerosInf)
+            {
+                if (!NumerosNovos.Contains(N))
+                {
+                    NumerosNovos.Add(N);
+                }
+
+                else if (!NumerosRep.Contains(N))
+                {
+                    NumerosRep.Add(N);
+                }
+            }
+            Console.WriteLine("Lista completa" + string.Join(",", NumerosInf));
+            Console.WriteLine("Números repetidos" + string.Join(",", NumerosRep));
+            Console.WriteLine("Números sem repetição" + string.Join(",", NumerosNovos));
+        }
+    }
+}

@@ -1,0 +1,29 @@
+namespace Lista
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> Palavras = new List<string> { };
+            string Entrada = "";
+            while (Entrada != "0")
+            {
+                Console.WriteLine("Digite uma palavra (ou digite 0 para encerrar): ");
+                Entrada = Console.ReadLine();
+                Palavras.Add(Entrada);
+            }
+            Console.WriteLine("Digite a palavra que deseja buscar: ");
+            string ContarPalavra = Console.ReadLine();
+
+            int Contar = 0;
+            foreach (string P in Palavras)
+            {
+                if (P == ContarPalavra)
+                {
+                    Contar++;
+                }
+            }
+            Console.WriteLine($"Temos {Contar} ocorrências de {ContarPalavra}");
+        }
+    }
+}
